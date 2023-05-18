@@ -3,8 +3,11 @@ from django.urls import resolve, reverse
 
 from recipes import views
 
-
 # Create your tests here.
+
+# Testando as URLs
+
+
 class RecipeURLsTest(TestCase):
     def test_recipe_home_url_is_correct(self):
         url = reverse('recipes:home')
@@ -19,6 +22,7 @@ class RecipeURLsTest(TestCase):
         self.assertEqual(url, '/recipes/1/')
 
 
+# Testando as Views
 class RecipeViewsTest(TestCase):
     def test_recipe_home_view_function_is_correct(self):
         view = resolve(reverse('recipes:home'))
